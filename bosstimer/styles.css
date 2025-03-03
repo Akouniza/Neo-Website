@@ -68,6 +68,7 @@ nav .nav-links {
 }
 
 /* Navigation Link Items */
+/* Navigation Link Items */
 nav .nav-links li {
     margin-left: 0;
 }
@@ -77,22 +78,21 @@ nav .nav-links a {
     color: #f0c674;
     font-size: 1.2em;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, box-shadow 0.3s;
+    padding: 10px 20px;
+    border-radius: 50%; /* Make the button circular */
+    background-color: #444;
+    display: inline-block; /* Ensure the padding and border-radius work correctly */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Apply a soft round shadow */
 }
 
+/* Navigation Link Hover Effect */
 nav .nav-links a:hover {
     color: #ffdb5c;
+    background-color: #f0c674;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* More pronounced shadow on hover */
 }
 
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #222;
-    color: #fff;
-    margin: 0;
-    padding: 20px;
-}
 
 /* Grid Layout */
 .grid-container {
@@ -102,6 +102,7 @@ body {
     justify-content: center;
     margin: auto;
     max-width: 900px;
+    padding-top: 100px; /* Adds extra padding to move the grid down below the header */
 }
 
 /* Individual Square */
