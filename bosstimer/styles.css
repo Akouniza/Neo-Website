@@ -1,5 +1,91 @@
 /* General Styles */
 body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 80px; /* Adds space for the fixed header */
+}
+
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    height: 80px; /* Fixed header height */
+    display: flex;
+    align-items: center; /* Vertically center the logo and nav items */
+    justify-content: space-between; /* Ensure space between logo and nav items */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+nav .logo {
+    display: flex;
+    margin-top: 60px;
+    align-items: center; /* Center logo vertically */
+}
+
+nav .logo img {
+    width: 180px;
+    transition: transform 0.3s ease;
+}
+
+/* Logo hover effect */
+nav .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Links */
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    margin-left: 200px;
+    position: relative; /* Added */
+    top: -65px; /* Moves nav links 100px up */
+    align-items: center; /* Ensure nav items are vertically centered */
+}
+
+/* Navigation Link Items */
+nav .nav-links li {
+    margin-left: 0;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #f0c674;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #ffdb5c;
+}
+
+/* General Styles */
+body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #222;
@@ -73,52 +159,4 @@ button:hover {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
-}
-
-/* Header et Navigation */
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px 0;
-    z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    height: 80px; /* Hauteur définie pour le header */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
-}
-
-/* Navigation link styling */
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-link {
-    color: #f0c674;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #444;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-link:hover {
-    background-color: #f0c674;
-    color: #222;
 }
