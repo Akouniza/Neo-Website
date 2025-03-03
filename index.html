@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Title</title>
+    <link rel="stylesheet" href="template/styles.css" />
   </head>
   <body>
     <!-- Video Background -->
@@ -15,29 +16,36 @@
       Your browser does not support the video tag.
     </video>
 
-    <!-- Header Placeholder -->
-    <div id="header-container"></div>
+    <!-- Header with Navigation -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#" target="_blank">
+            <img
+              src="https://cdn.ncwest.com/blade-and-soul/02252025-01424B6EEAE46D20/images/logo-neo.png"
+              alt="Site Logo"
+            />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Main</a></li>
+          <li><a href="criticalcalculator.html">Critical Calculator</a></li>
+          <li><a href="bosstimer.html">Field Boss Scheduler</a></li>
+          <li><a href="To Come">To Come</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Main Content Area -->
     <div class="container">
       <h1>Welcome to the Main Page</h1>
       <p>More to come later...</p>
+      <!-- Additional sections can be added here -->
     </div>
 
-    <!-- Footer Placeholder -->
-    <div id="footer-container"></div>
-
-    <!-- JavaScript to dynamically load header and footer -->
-    <script>
-      // Load header
-      fetch('fragmented/header.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('header-container').innerHTML = data);
-
-      // Load footer
-      fetch('fragmented/footer.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('footer-container').innerHTML = data);
-    </script>
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2025 - Aesthia</p>
+    </div>
   </body>
 </html>
