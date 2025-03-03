@@ -1,0 +1,76 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    justify-content: center;
+    margin: auto;
+    max-width: 900px;
+}
+
+/* Individual Square */
+.square {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Timer Display */
+.timer {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #f0c674;
+}
+
+/* Buttons */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.boss-dead { background-color: #ff4d4d; }
+.mutated-spawn { background-color: #4dff88; }
+.mutated-died { background-color: #4d79ff; }
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

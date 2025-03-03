@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Boss Schedulers</title>
+    <link rel="stylesheet" href="bosstimer/styles.css">
+</head>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="https://www.bladeandsoul.com/en/" target="_blank">
+                <img src="https://cdn.ncwest.com/blade-and-soul/02252025-01424B6EEAE46D20/images/logo-neo.png" alt="Blade & Soul Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Calculator Critical</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+
+    <div class="grid-container">
+        <!-- Create 10 squares dynamically -->
+        <script>
+            for (let i = 1; i <= 10; i++) {
+                document.write(`
+                    <div class="square">
+                        <h2>Channel ${i}</h2>
+                        <div class="timer" id="timer${i}">00:00</div>
+                        <button class="btn boss-dead" onclick="startTimer(5, 'timer${i}')">Boss Dead</button>
+                        <button class="btn mutated-spawn" onclick="startTimer(2, 'timer${i}')">Mutated Boss Spawn</button>
+                        <button class="btn mutated-died" onclick="startTimer(8, 'timer${i}')">Mutated Boss Died</button>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+
+    <script src="bosstimer/script.js"></script>
+
+</body>
+</html>

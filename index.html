@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><a href="https://www.bladeandsoul.com/en/" target="_blank" style="text-decoration: none; color: #f0c674;">Blade & Soul: Critical Rate & Damage Calculator</a></title>
+    <link rel="stylesheet" href="critical/styles.css">
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video autoplay loop muted class="video-background">
+        <source src="https://cdn.ncwest.com/blade-and-soul/02252025-01424B6EEAE46D20/videos/neo/trailer/loop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="https://www.bladeandsoul.com/en/" target="_blank">
+                    <img src="https://cdn.ncwest.com/blade-and-soul/02252025-01424B6EEAE46D20/images/logo-neo.png" alt="Blade & Soul Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="bosstimer.html">Boss Timer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1><a href="https://www.bladeandsoul.com/en/" target="_blank" style="text-decoration: none; color: #f0c674;">Blade & Soul: Critical Rate & Damage Calculator</a></h1>
+        <p>Enter your points to calculate your Critical Rate and Damage in Blade & Soul!</p>
+
+        <!-- Input for Critical Rate -->
+        <div class="section" id="critical-rate">
+            <h2>Critical Rate</h2>
+            <input type="number" id="pointsCrit" placeholder="Enter points for Critical Rate" />
+            <button onclick="calculateCriticalRate()">Calculate Critical Rate</button>
+            <div class="result" id="critRateResult"></div>
+        </div>
+
+        <!-- Input for Critical Damage -->
+        <div class="section" id="critical-damage">
+            <h2>Critical Damage</h2>
+            <input type="number" id="pointsDamage" placeholder="Enter points for Critical Damage" />
+            <button onclick="calculateCriticalDamage()">Calculate Critical Damage</button>
+            <div class="result" id="critDamageResult"></div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Blade & Soul Neo - Aesthia</p>
+    </div>
+
+    <script>
+        function calculateCriticalRate() {
+            let points = document.getElementById("pointsCrit").value;
+            let m_rate = 0.0487;
+            let b_rate = 5.9487;
+            let criticalRate = m_rate * points + b_rate;
+            document.getElementById("critRateResult").innerHTML = `<p>Critical Rate: ${criticalRate.toFixed(2)}%</p>`;
+        }
+
+        function calculateCriticalDamage() {
+            let points = document.getElementById("pointsDamage").value;
+            let m_damage = 0.103;
+            let b_damage = 129.057;
+            let criticalDamage = m_damage * points + b_damage;
+            document.getElementById("critDamageResult").innerHTML = `<p>Critical Damage: ${criticalDamage.toFixed(2)}%</p>`;
+        }
+    </script>
+
+</body>
+</html>
