@@ -85,20 +85,32 @@
 
     <script>
       function calculateCriticalRate() {
-        let points = document.getElementById("pointsCrit").value;
-        let m_rate = 0.0487;
-        let b_rate = 5.9487;
-        let criticalRate = m_rate * points + b_rate;
+        let points = parseFloat(document.getElementById("pointsCrit").value);
+        if (isNaN(points) || points < 0) {
+          alert("Please enter a valid number for Critical Rate.");
+          return;
+        }
+
+        // Applying the provided formula for Crit
+        let criticalRate = (96.98979 * points) / (1124.069 + points);
+        
+        // Displaying the result
         document.getElementById(
           "critRateResult"
         ).innerHTML = `<p>Critical Rate: ${criticalRate.toFixed(2)}%</p>`;
       }
 
       function calculateCriticalDamage() {
-        let points = document.getElementById("pointsDamage").value;
-        let m_damage = 0.103;
-        let b_damage = 129.057;
-        let criticalDamage = m_damage * points + b_damage;
+        let points = parseFloat(document.getElementById("pointsDamage").value);
+        if (isNaN(points) || points < 0) {
+          alert("Please enter a valid number for Critical Damage.");
+          return;
+        }
+
+        // Applying the provided formula for CDmg
+        let criticalDamage = (290.8 * points) / (2102.36 + points) + 125;
+        
+        // Displaying the result
         document.getElementById(
           "critDamageResult"
         ).innerHTML = `<p>Critical Damage: ${criticalDamage.toFixed(2)}%</p>`;
