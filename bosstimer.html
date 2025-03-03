@@ -37,20 +37,17 @@
     </header>
 
     <div class="grid-container">
-      <!-- Create 10 squares dynamically -->
-      <script>
-        for (let i = 1; i <= 10; i++) {
-          document.write(`
-                    <div class="square">
-                        <h2>Channel ${i}</h2>
-                        <div class="timer" id="timer${i}">00:00</div>
-                        <button class="btn boss-dead" onclick="startTimer(5, 'timer${i}')">Boss Dead</button>
-                        <button class="btn mutated-spawn" onclick="startTimer(2, 'timer${i}')">Mutated Boss Spawn</button>
-                        <button class="btn mutated-died" onclick="startTimer(8, 'timer${i}')">Mutated Boss Died</button>
-                    </div>
-                `);
-        }
-      </script>
+      <!-- Create 2 rows with the squares and the "Next Spawned Boss" square next to it -->
+      <div class="grid-left">
+        <!-- Create 10 squares dynamically -->
+      </div>
+
+      <!-- Next Spawned Boss Square -->
+      <div id="next-spawned-boss" class="square">
+        <h2>Next Spawned Boss</h2>
+        <div id="next-timer"></div>
+        <p id="next-boss-channel"></p>
+      </div>
     </div>
 
     <script src="bosstimer/script.js"></script>
