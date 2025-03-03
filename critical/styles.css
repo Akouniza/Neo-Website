@@ -77,11 +77,19 @@ nav .nav-links a {
     color: #f0c674;
     font-size: 1.2em;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, box-shadow 0.3s;
+    padding: 10px 20px;
+    border-radius: 50%; /* Make the button circular */
+    background-color: #444;
+    display: inline-block; /* Ensure the padding and border-radius work correctly */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Apply a soft round shadow */
 }
 
+/* Navigation Link Hover Effect */
 nav .nav-links a:hover {
     color: #ffdb5c;
+    background-color: #f0c674;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* More pronounced shadow on hover */
 }
 
 /* Main Content */
