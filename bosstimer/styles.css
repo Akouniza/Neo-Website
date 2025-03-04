@@ -146,7 +146,7 @@ button {
 }
 
 .boss-dead { background-color: #ff4d4d; }
-.mutated-spawn { background-color: #4dff88; }
+.mutated-spawn { background-color: #288a49; }
 .mutated-died { background-color: #4d79ff; }
 
 button:hover {
