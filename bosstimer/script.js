@@ -34,7 +34,6 @@ function updateTimer(timer) {
         delete activeTimers[elementId];
         // Remove expired timer from allTimers array
         allTimers = allTimers.filter(timer => timer.elementId !== elementId);
-        alert(`${elementId} timer is over!`);
     } else {
         // Decrease time for active timers
         timer.timeRemaining--;
