@@ -1,0 +1,25 @@
+/* Main Content */
+.container {
+    max-width: 800px;
+    background: rgba(42, 42, 42, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+h1 {
+    font-size: 2.5rem;
+    color: #f0c674;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ddd;
+}

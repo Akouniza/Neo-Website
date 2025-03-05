@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aesthia - Scheduler</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles/global.css">
+   <link rel="stylesheet" href="styles/bosstimer.css" />
+  </head>
+  <body>
+    <!-- Video Background -->
+    <video autoplay loop muted class="video-background">
+      <source
+        src="https://cdn.ncwest.com/blade-and-soul/02252025-01424B6EEAE46D20/videos/neo/trailer/loop.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Header with Navigation -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="https://www.bladeandsoul.com/en/" target="_blank">
+            <img
+              src="https://cdn.ncwest.com/blade-and-soul/02252025-01424B6EEAE46D20/images/logo-neo.png"
+              alt="Blade & Soul Logo"
+            />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Main</a></li>
+          <li><a href="criticalcalculator.html">Critical Calculator</a></li>
+          <li><a href="bosstimer.html">Field Boss Scheduler</a></li>
+          <li><a href="To Come">To Come</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="grid-container">
+      <!-- Create 2 rows with the squares and the "Next Spawned Boss" square next to it -->
+      <div class="grid-left">
+        <!-- Create 10 squares dynamically -->
+      </div>
+
+      <!-- Next Spawned Boss Square -->
+      <div id="next-spawned-boss" class="square">
+        <h2>Next Spawned Boss</h2>
+        <div id="next-timer"></div>
+        <p id="next-boss-channel"></p>
+      </div>
+    </div>
+
+    <script src="scripts/bosstimer.js"></script>
+
+    <div class="footer">
+      <p>© 2025 - Aesthia</p>
+    </div>
+  </body>
+</html>

@@ -1,3 +1,14 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 80px; /* Adds space for the fixed header */
+}
+
 /* Grid Layout */
 .grid-container {
     display: flex;
