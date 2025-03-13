@@ -5,7 +5,7 @@ function calculateCriticalRate() {
         return;
     }
 
-    let criticalRate = (96.98979 * points) / (1124.069 + points);
+    let criticalRate = (97.04427 * points) / (2368.384 + points);
     document.getElementById("critRateResult").innerHTML = `<p>Critical Rate: ${criticalRate.toFixed(2)}%</p>`;
 }
 
